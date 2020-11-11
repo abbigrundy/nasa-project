@@ -2,6 +2,10 @@ const express = require("express");
 
 const router = express.Router();
 
+router.use(express.static("frontend"));
+// router.use(express.static("frontend/login.html"));
+router.use("/login", express.static("frontend/login.html"));
+
 router.get("/", (req, res) => {
   res.send();
 });
