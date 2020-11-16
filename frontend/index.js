@@ -1,8 +1,8 @@
-const currentUserTime = () => {};
-const user = new Date().toLocaleTimeString();
-let userDate = document.getElementById("local-date");
-userDate.innerHTML = user;
-
+const currentUserTime = () => {
+  const user = new Date().toLocaleTimeString();
+  let userDate = document.getElementById("local-date");
+  userDate.innerHTML = user;
+};
 currentUserTime();
 
 const kennedySpaceCentreTime = () => {
@@ -16,11 +16,11 @@ const kennedySpaceCentreTime = () => {
 kennedySpaceCentreTime();
 
 const timeZoneDifference = () => {
-  const usersTime = new Date().getTimezoneOffset() / 60;
-  const additionalTimeFromUser = 5;
+  const usersUTCOffsetHours = new Date().getTimezoneOffset() / 60;
+  const totalTimeZoneOffset = usersUTCOffsetHours + 5;
 
   const offset = document.createTextNode(
-    `${additionalTimeFromUser} hours ahead of the Kennedy Space Centre`
+    `${totalTimeZoneOffset} hours ahead of the Kennedy Space Centre`
   );
 
   document.getElementById("difference").append(offset);
