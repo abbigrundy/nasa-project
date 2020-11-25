@@ -32,6 +32,8 @@ const solDays = document.getElementById("sol-days");
 const earthDayMs = 86400000;
 const solDayMs = 88775240;
 const convertToSol = solDayMs / earthDayMs;
+const curiosityLandingDateMs =
+  Date.now() - new Date(2012, 7, 6, 5, 17, 57).getTime();
 
 const calcualteSol = () => {
   const solDays = document.getElementById("sol-days");
@@ -46,3 +48,12 @@ const calcualteSol = () => {
   solDays.innerHTML = sol;
 };
 calcualteSol();
+
+const calcEarthDay = document.getElementById("earth-days");
+
+function displayEarthDaySinceMarsRoverLanded() {
+  const roundedEarthDays = Math.round(curiosityLandingDateMs / earthDayMs);
+  calcEarthDay.innerHTML = roundedEarthDays;
+}
+
+displayEarthDaySinceMarsRoverLanded();
