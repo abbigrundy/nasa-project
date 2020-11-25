@@ -34,6 +34,8 @@ const solDayMs = 88775240;
 const convertToSol = solDayMs / earthDayMs;
 
 const calcualteSol = () => {
+  const solDays = document.getElementById("sol-days");
+  const convertToSol = solDayMs / earthDayMs;
   const curiosityLandingDateMs =
     Date.now() - new Date(2012, 7, 6, 5, 17, 57).getTime();
 
