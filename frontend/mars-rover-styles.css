@@ -1,11 +1,22 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100hv;
 }
 
+#mars-rover-journey {
+  position: relative;
+}
 img {
+  position: absolute;
   width: 100%;
   height: auto;
   object-fit: fill;
+}
+
+#mars-sprite {
+  width: 15%;
+  position: relative;
+  left: 94px;
+  top: 520px;
 }
