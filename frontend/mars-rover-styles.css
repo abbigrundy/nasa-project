@@ -4,10 +4,7 @@ body {
   height: 100hv;
 }
 
-#mars-rover-journey {
-  position: relative;
-}
-img {
+#journey {
   position: absolute;
   width: 100%;
   height: auto;
