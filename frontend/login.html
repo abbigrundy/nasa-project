@@ -9,16 +9,14 @@
         <h1>Mars Rover</h1>
         <h2>Login</h2>
         <p>Login here to your NASA portal.</p>
-        <form class="login" action="/authenticate" method="POST"> 
-            <section class="form-input">
-                <label for="username">Username</label>
-                <input type="text" placeholder="Enter username" name="username">
+        <form action="/authenticate" method="POST"> 
+            <section class="form-input-username">
+                <label id="username">Username <input type="text" placeholder="Enter username" name="username"></label>
             </section>
-            <section class="form-input">
-                <label for="password">Password</label>
-                <input type="password" placeholder="Enter password" name="password">
+            <section class="form-input-password">
+                <label id="password">Password  <input type="password" placeholder="Enter password" name="password"></label>
             </section>
-            <button type="submit">
+            <button type="submit" value="Submit">
                 Submit
             </button>
         </form>
