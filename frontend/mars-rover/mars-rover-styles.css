@@ -13,7 +13,7 @@ body {
 
 #mars-sprite {
   width: 15%;
-  position: relative;
+  position: absolute;
   left: 94px;
   top: 520px;
 }
