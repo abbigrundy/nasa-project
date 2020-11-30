@@ -1,27 +1,45 @@
+let isDragging = false;
+
 const dragSprite = document.getElementById("mars-sprite");
-
-dragSprite.onmousedown = function (event) {
-  //center the sprite at  x and y coordinates
-  function moveAt(pageX, pageY) {
-    dragSprite.style.left = pageX - dragSprite.offsetWidth / 2 + "px";
-    dragSprite.style.top = pageY - dragSprite.offsetHeight / 2 + "px";
-  }
-  // move the absolutely position sprite under the pointer
-  moveAt(event.pageX, event.pageY);
-
-  function onMouseMove(event) {
-    moveAt(event.pageX, event.pageY);
-  }
-
-  // move the sprite on mousemove
-  document.addEventListener("mousemove", onMouseMove);
-  // drop the sprite and remove uneeded handlers
-  dragSprite.onmouseup = function () {
-    document.removeEventListener("mousemove", onMouseMove);
-    dragSprite.onmouseup = null;
-  };
+const distanceMoved = {
+  x: 0,
+  y: 0,
 };
-//remove browser default support for drag and drop images
-dragSprite.ondragstart = function () {
-  return false;
+
+const dragStart = {
+  x: 0,
+  y: 0,
 };
+
+const translateStart = {
+  x: 0,
+  y: 0,
+};
+
+function startDragging(event) {
+  isDragging = true;
+  dragStart.x = event.clientX;
+  dragStart.y = event.clientY;
+  translateStart.x = distanceMoved.x;
+  translateStart.y = distanceMoved.y;
+}
+
+dragSprite.addEventListener("mousedown", startDragging);
+
+function moveSprite(event) {
+  if (isDragging === true) {
+    event.preventDefault();
+    distanceMoved.x = translateStart.x + event.clientX - dragStart.x;
+    distanceMoved.y = translateStart.y + event.clientY - dragStart.y;
+
+    dragSprite.style.transform = `translate(${distanceMoved.x}px, ${distanceMoved.y}px)`;
+  }
+}
+
+dragSprite.addEventListener("mousemove", moveSprite);
+
+function stopDragging() {
+  isDragging = false;
+}
+
+dragSprite.addEventListener("mouseup", stopDragging);
