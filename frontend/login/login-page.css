@@ -9,7 +9,7 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: #3a3a3a;
+  background-color: #005974;
 }
 
 #main-holder {
@@ -19,8 +19,8 @@ body {
   justify-items: center;
   align-items: center;
   background-color: white;
-  border-radius: 7px;
-  box-shadow: 0px 0px 5px 2px black;
+  border-radius: 18px;
+  box-shadow: 0px 0px 5px 2px rgb(0, 165, 151);
 }
 
 #login-error-msg-holder {
@@ -56,12 +56,12 @@ body {
 }
 
 .login-form-field::placeholder {
-  color: #3a3a3a;
+  color: #050505;
 }
 
 .login-form-field {
   border: none;
-  border-bottom: 1px solid #3a3a3a;
+  border-bottom: 1px solid #00b0cf;
   margin-bottom: 10px;
   border-radius: 3px;
   outline: none;
@@ -75,7 +75,26 @@ body {
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  background-color: #3a3a3a;
+  background-color: #00afaf;
   cursor: pointer;
   outline: none;
+}
+
+#login-register {
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #00afaf;
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  color: white;
+}
+
+a {
+  color: black;
 }
