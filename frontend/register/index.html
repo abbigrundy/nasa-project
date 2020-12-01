@@ -36,7 +36,7 @@ least 8 or more characters" required required>
       <br>
 
 
-      <button onClick="checkPasswordsMatch()"  class="registerbtn"> Register </button>
+      <button onClick="checkPasswordsMatch(); validateEmail()"  class="registerbtn"> Register </button>
 
       <div id="checksField">
     <h3>Password must contain the following:</h3>
@@ -53,7 +53,7 @@ least 8 or more characters" required required>
   
   <div>
     <button class="loginbtn">
-     Return to login page
+      <a target="_self" href="../login/index.html">  Return to login page</a>
     </button>
   </div>
 
