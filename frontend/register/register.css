@@ -72,3 +72,39 @@ a {
   opacity: 0.9;
   border-radius: 5px;
 }
+
+#checksField {
+  display: none;
+  background: white;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#checksField h1 {
+  color: black;
+}
+
+#checksField p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+.correct {
+  color: rgb(89, 255, 117);
+}
+
+.correct:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+.wrong {
+  color: rgb(255, 97, 97);
+}
+.wrong:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
