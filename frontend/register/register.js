@@ -17,6 +17,14 @@ const validationNotMatched = (id) => {
   id.classList.add("wrong");
 };
 
+const validateInput = (isValid, element) => {
+  if (isValid) {
+    validationMatched(element);
+  } else {
+    validationNotMatched(element);
+  }
+};
+
 passwordInput.onkeyup = function () {
   const letter = document.getElementById("letter");
   const capital = document.getElementById("capital");
@@ -26,29 +34,10 @@ passwordInput.onkeyup = function () {
   const upperCaseLetters = /[A-Z]/g;
   const numbers = /[0-9]/g;
 
-  if (passwordInput.value.match(lowerCase)) {
-    validationMatched(letter);
-  } else {
-    validationNotMatched(letter);
-  }
-
-  if (passwordInput.value.match(upperCaseLetters)) {
-    validationMatched(capital);
-  } else {
-    validationNotMatched(capital);
-  }
-
-  if (passwordInput.value.match(numbers)) {
-    validationMatched(number);
-  } else {
-    validationNotMatched(number);
-  }
-
-  if (passwordInput.value.length >= 8) {
-    validationMatched(length);
-  } else {
-    validationNotMatched(length);
-  }
+  validateInput(passwordInput.value.match(lowerCase), letter);
+  validateInput(passwordInput.value.match(upperCaseLetters), capital);
+  validateInput(passwordInput.value.match(numbers), number);
+  validateInput(passwordInput.value.length >= 8, length);
 };
 
 const validateEmail = () => {
