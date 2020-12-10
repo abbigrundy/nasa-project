@@ -12,37 +12,42 @@ passwordInput.onblur = function () {
   document.getElementById("checksField").style.display = "none";
 };
 
+const validationMatched = (id) => {
+  id.classList.remove("wrong");
+  id.classList.add("correct");
+};
+const validationNotMatched = (id) => {
+  id.classList.remove("correct");
+  id.classList.add("wrong");
+};
+
 passwordInput.onkeyup = function () {
   const lowerCase = /[a-z]/g;
-  if (passwordInput.value.match(lowerCase)) {
-    letter.classList.remove("wrong");
-    letter.classList.add("correct");
-  } else {
-    letter.classList.remove("correct");
-    letter.classList.add("wrong");
-  }
   const upperCaseLetters = /[A-Z]/g;
-  if (passwordInput.value.match(upperCaseLetters)) {
-    capital.classList.remove("wrong");
-    capital.classList.add("correct");
-  } else {
-    capital.classList.remove("correct");
-    capital.classList.add("wrong");
-  }
   const numbers = /[0-9]/g;
-  if (passwordInput.value.match(numbers)) {
-    number.classList.remove("wrong");
-    number.classList.add("correct");
+
+  if (passwordInput.value.match(lowerCase)) {
+    validationMatched(letter);
   } else {
-    number.classList.remove("correct");
-    number.classList.add("wrong");
+    validationNotMatched(letter);
   }
-  if (passwordInput.value.length >= 8) {
-    length.classList.remove("wrong");
-    length.classList.add("correct");
+
+  if (passwordInput.value.match(upperCaseLetters)) {
+    validationMatched(capital);
   } else {
-    length.classList.remove("correct");
-    length.classList.add("wrong");
+    validationNotMatched(capital);
+  }
+
+  if (passwordInput.value.match(numbers)) {
+    validationMatched(number);
+  } else {
+    validationNotMatched(number);
+  }
+
+  if (passwordInput.value.length >= 8) {
+    validationMatched(length);
+  } else {
+    validationNotMatched(length);
   }
 };
 
