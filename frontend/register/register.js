@@ -1,8 +1,4 @@
 const passwordInput = document.getElementById("password");
-const letter = document.getElementById("letter");
-const capital = document.getElementById("capital");
-const number = document.getElementById("number");
-const length = document.getElementById("length");
 
 passwordInput.onfocus = function () {
   document.getElementById("checksField").style.display = "block";
@@ -22,6 +18,10 @@ const validationNotMatched = (id) => {
 };
 
 passwordInput.onkeyup = function () {
+  const letter = document.getElementById("letter");
+  const capital = document.getElementById("capital");
+  const number = document.getElementById("number");
+  const length = document.getElementById("length");
   const lowerCase = /[a-z]/g;
   const upperCaseLetters = /[A-Z]/g;
   const numbers = /[0-9]/g;
