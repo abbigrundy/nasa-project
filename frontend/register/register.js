@@ -1,3 +1,5 @@
+const passwordInput = document.getElementById("password");
+
 passwordInput.onfocus = function () {
   document.getElementById("checksField").style.display = "block";
 };
