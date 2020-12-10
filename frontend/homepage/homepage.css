@@ -14,9 +14,19 @@
   border: 15px solid rgb(255, 108, 108);
 }
 
-.curiosity-rover
-
-aside {
+.curiosity-rover aside {
   float: right;
   padding-left: 20%;
+}
+
+.no-script-banner {
+  background-color: rgb(237, 41, 57);
+  padding: 30px;
+}
+
+.no-script-text {
+  color: white;
+  width: 60vw;
+  margin: auto;
+  text-align: center;
 }
