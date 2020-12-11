@@ -98,3 +98,28 @@ a {
 a {
   color: black;
 }
+
+.header {
+  background: rgb(93, 93, 235);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 50px;
+}
+
+.header a {
+  color: white;
+
+  text-align: center;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.header a:hover {
+  color: lightcoral;
+  background-color: skyblue;
+}
+
+.header-right {
+  float: right;
+}
