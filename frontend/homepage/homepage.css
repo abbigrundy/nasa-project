@@ -1,10 +1,12 @@
-.body {
+body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color:powderblue;
 }
 
 .header {
-  background: rgb(93, 93, 235);
+  background: rgb(0, 165, 151);
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 50px;
@@ -34,7 +36,7 @@
   margin-right: auto;
   max-width: 60%;
   max-height: 60%;
-  border: 15px solid rgb(255, 108, 108);
+  border: 15px solid rgb(255, 255, 255);
 }
 
 .curiosity-rover aside {
