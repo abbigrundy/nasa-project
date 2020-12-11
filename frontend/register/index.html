@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <form  name="register" target="_blank"  method="POST">
+  <form  method="POST" name="register" action="/register">
     <div class="container">
       <h1>Register</h1>
       <p>Please fill in this form to create an account</p>
@@ -35,7 +35,7 @@
       <br>
 
 
-      <button onClick="validateEmail()"  class="registerbtn"> Register </button>
+      <button onClick="validateEmail()"  class="registerbtn" href="../login"> Register </button>
 
       <div id="checksField">
     <h3>Password must contain the following:</h3>
