@@ -15,6 +15,6 @@ router.get("/image", (req, res) => {
 });
 
 router.use("/register", express.static("frontend/register"));
-router.use("/rover", express.static("frontend/mars-rover"));
+router.use("/rover", express.static("frontend/rover"));
 
 module.exports = router;
