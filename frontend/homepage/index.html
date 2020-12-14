@@ -4,8 +4,9 @@
     <title>Mars Rover</title>
    <meta charset="utf-8">
     <link rel="stylesheet" href="./homepage.css">
+    <script type="text/javascript" src="displayUser.js"></script>
  </head>
-<body>
+<body onload="displayUserName()">
   <noscript>
       <div class="no-script-banner">
         <p class="no-script-text">
@@ -25,7 +26,8 @@
     </nav>
   </header>
   <section>
-<h1 >Welcome...</h1>
+<h1 >Welcome</h1>
+<p id=username > You are logged in as: </p>
 </section>
 
 <image class="curiosity-rover" src="./PIA20602_small.jpg" alt="Curiosity self portrait">

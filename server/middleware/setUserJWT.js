@@ -1,11 +1,11 @@
 const jwt = require("jsonwebtoken");
-const database_credentials = require("../database/.database-cred");
+const database_cred = require("../database/.database-cred");
 
 const setUserJwt = (request, response) => {
   const { username, password } = request.body;
   const jsonWebToken = jwt.sign(
     { username, password },
-    database_credentials.PRIVATEKEY
+    database_cred.PRIVATEKEY
   );
 
   response.cookie("jwt", jsonWebToken);
