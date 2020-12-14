@@ -7,7 +7,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-.database-credentials
+.database-cred.js
 
 # Icon must end with two \r
 Icon
