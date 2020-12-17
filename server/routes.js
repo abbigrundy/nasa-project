@@ -5,6 +5,7 @@ const { checkUserCredentials } = require("./middleware/checkUserCredentials");
 const { setUserJwt } = require("./middleware/setUserJwt");
 const { getUsername } = require("./middleware/getUsername");
 const { newUser } = require("./middleware/newUser");
+const { logOutUser } = require("./middleware/logOutUser");
 const { request, response } = require("express");
 
 const router = express.Router();
@@ -20,6 +21,7 @@ router.post("/authenticate", checkUserCredentials, setUserJwt);
 router.use("/register", express.static("frontend/register"));
 
 router.use("/username", getUsername);
+router.use("/rover", express.static("frontend/rover"));
 
 router.post("/register", newUser);
 router.use(
@@ -27,5 +29,7 @@ router.use(
   passport.authenticate("jwt", { session: false, failureRedirect: "/login" }),
   express.static("app/rover-map")
 );
+
+router.get("/logout", logOutUser);
 
 module.exports = router;

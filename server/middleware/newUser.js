@@ -12,8 +12,8 @@ const newUser = async (request, response, next) => {
       fields: ["username", "password", "email"],
     }
   );
-  next();
-  response.redirect("/login")
+
+  response.redirect("/login");
 };
 
 module.exports = { newUser };

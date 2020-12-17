@@ -2,9 +2,13 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background-color:powderblue;
+  background-color: powderblue;
 }
-
+div {
+  position: fixed;
+  right: 10px;
+  top: 5px;
+}
 .header {
   background: rgb(0, 165, 151);
   color: rgb(255, 255, 255);

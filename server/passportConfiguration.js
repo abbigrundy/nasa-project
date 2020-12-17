@@ -6,6 +6,7 @@ const PRIVATE_KEY = require("./database/.database-cred");
 function getJwt(request) {
   if (request) {
     return request.cookies.jwt;
+    
   }
   return false;
 }

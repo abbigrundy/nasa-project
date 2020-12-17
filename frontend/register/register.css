@@ -109,3 +109,16 @@ a {
   left: -35px;
   content: "✖";
 }
+
+
+#homepage {
+  background-color: rgb(0, 180, 171);
+  color: rgb(255, 255, 255);
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: fixed;
+  right: 10px;
+  top: 5px;
+  border: 8px whitesmoke;
+}

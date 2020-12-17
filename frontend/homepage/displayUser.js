@@ -9,7 +9,7 @@ function displayUserName() {
         username.textContent += data.username;
       } else {
         const username = document.getElementById("username");
-        username.textContent = "You are not signed in";
+        username.textContent = "You are not currently signed in";
       }
     })
     .catch((error) => {

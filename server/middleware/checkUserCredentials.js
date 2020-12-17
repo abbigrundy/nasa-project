@@ -13,7 +13,7 @@ const checkUserCredentials = (request, response, next) => {
       if (databaseResponse[0]) {
         return next();
       } else {
-        response.redirect("/login");
+        response.redirect("/rover");
       }
     })
     .catch((error) => {
